@@ -1,6 +1,7 @@
 from Cracked_Mods_Checker import CrackedMods
 import requests
 import json
+import os
 
 class Checker():
 
@@ -54,5 +55,9 @@ class Checker():
 
                 all_mods_list.append(mod)
         
+        with open('factorio-loader/mods.json', 'w', encoding='UTF-8') as f:
+            json.dump(all_mods_list, f, ensure_ascii=False, indent=4)
+            f.close
+
         return all_mods_list
 

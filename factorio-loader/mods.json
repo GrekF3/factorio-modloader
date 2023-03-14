@@ -1,0 +1,177 @@
+[
+    {
+        "Название мода:": "Jonnys Debug",
+        "Версия Факторио:": "0.17",
+        "Версия Мода:": "0.17.0",
+        "Описание мода:": "\"ErrorReport Log Gui\" for Modder\r\nFactorio Start = Printet all Tables and Variables in the JoErrRep Funktion into a Gui Overlay and Stop Factorio",
+        "Автор мода:": "1Jonny"
+    },
+    {
+        "Название мода:": "Cheater Modpack",
+        "Версия Факторио:": "1.1",
+        "Версия Мода:": "0.0.1",
+        "Описание мода:": "Old and broken.",
+        "Автор мода:": "tntmasta"
+    },
+    {
+        "Название мода:": "Lua API Event Trace",
+        "Версия Факторио:": "1.1",
+        "Версия Мода:": "0.3.1",
+        "Описание мода:": "This is a debugging tool. This mod tracks and shows you what event ID(defines.events.～) occurs. Only admins can open GUI if it is multiplay game.\r\n- Press SHIFT+F3 to open GUI. (you can change key bindings)\r\n- Press SHIFT+F2 for quick toggle logging mode while GUI is opened.\r\n- Only works while GUI is opened.\r\nTracked logs can be saved and investigated by \"gvv\" mod. https://mods.factorio.com/mod/gvv\r\nVisit https://lua-api.factorio.com/latest/events.html to see full description of events.",
+        "Автор мода:": "x2605"
+    },
+    {
+        "Название мода:": "Rebalanced Game",
+        "Версия Факторио:": "0.17",
+        "Версия Мода:": "0.17.70",
+        "Описание мода:": "Totally changes the game Balance. (Why put furnaces in Science Potions when you should be putting the Potion in the Furnace? upgrade your labs instead! and Player/Enemies/Spawners have Different HP and healing rates.)",
+        "Автор мода:": "EpicSlayer7666"
+    },
+    {
+        "Название мода:": "Advanced Radar for Factorio 0.15",
+        "Версия Факторио:": "0.15",
+        "Версия Мода:": "0.15.1",
+        "Описание мода:": "Port to 0.15 of Malcolm Cooks' AdvancedRadar mod. Advanced radar with greater range, speed, and power consumption.",
+        "Автор мода:": "ChurchOrganist"
+    },
+    {
+        "Название мода:": "infinite research (0.15 like)",
+        "Версия Факторио:": "0.14",
+        "Версия Мода:": "0.1.0",
+        "Описание мода:": "add (almost) infinite research like planned in 0.15. see friday fact #161. this mod add infinite research for upgrading robots, turrets, weapons and researching speed.",
+        "Автор мода:": "marshkip"
+    },
+    {
+        "Название мода:": "0.16 Science Packs",
+        "Версия Факторио:": "0.17",
+        "Версия Мода:": "0.1.1",
+        "Описание мода:": "Reverts the science pack recipes back to match 0.16.",
+        "Автор мода:": "SuperSandro2000"
+    },
+    {
+        "Название мода:": "0.17 science for 0.14 ( New-science addon)",
+        "Версия Факторио:": "0.14",
+        "Версия Мода:": "0.0.2",
+        "Описание мода:": "",
+        "Автор мода:": "voldkost"
+    },
+    {
+        "Название мода:": "0.17 Science Packs",
+        "Версия Факторио:": "0.16",
+        "Версия Мода:": "0.1.8",
+        "Описание мода:": "Changes the science pack recipes to match 0.17.",
+        "Автор мода:": "SuperSandro2000"
+    },
+    {
+        "Название мода:": "0.17 science conversion",
+        "Версия Факторио:": "0.16",
+        "Версия Мода:": "0.1.61",
+        "Описание мода:": "# DEPRECATED AS OF 2019-03-31T22:13:01 - SUPPORT PHASE ENDED\r\nAdds in the new science pack recipes and known tech tree, while keeping 0.16 recipes intact so that the player may update their base at their own pace. Implements almost all 0.17 balance changes: transport-belt, mining, smelting changes, and more (see page for full list). Compatible with existing saves, most big mods and will support release 0.17!\r\nIMPORTANT NOTE: Version 0.1.6 of this mod is the last working version of the mod. Version 0.1.7 of the mod will be only for migrating saves to the official 0.17.",
+        "Автор мода:": "morley376"
+    },
+    {
+        "Название мода:": "03 Longer Inserters",
+        "Версия Факторио:": "0.16",
+        "Версия Мода:": "0.0.1",
+        "Описание мода:": "3 block inserter",
+        "Автор мода:": "sokerd"
+    },
+    {
+        "Название мода:": "FactorioExtended Plus-Layout",
+        "Версия Факторио:": "1.1",
+        "Версия Мода:": "1.1.5",
+        "Описание мода:": "Moves all the FE+ crafting recipes into the main 4x tabs",
+        "Автор мода:": "billbo99"
+    },
+    {
+        "Название мода:": "Switchable logger",
+        "Версия Факторио:": "1.1",
+        "Версия Мода:": "0.1.0",
+        "Описание мода:": "Very simple switchable logger for writing data from events into script-output\\0ULogger_data.log (works on servers only)",
+        "Автор мода:": "ZwerOxotnik"
+    },
+    {
+        "Название мода:": "0.16 Graphics",
+        "Версия Факторио:": "0.18",
+        "Версия Мода:": "0.18.4",
+        "Описание мода:": "Changes graphics back to their 0.16 versions.\r\nAvailable Modules: Enemies, Enemy Spawners, Trees, Chests, Logistic Chests, Laser Towers, Laser attacks, Spitter attacks, Worm attacks",
+        "Автор мода:": "OwnlyMe"
+    },
+    {
+        "Название мода:": "0.16 Graphics UPDATED TO 1.1",
+        "Версия Факторио:": "1.1",
+        "Версия Мода:": "1.1.3",
+        "Описание мода:": "UPDATED FOR 1.1, I DO NOT OWN THIS. Changes graphics back to their 0.16 versions. Available Modules: Enemies, Enemy spawners, Trees, Chests, Logistic Chests, Laser towers, Laser attacks, Spitter attacks, Worm attacks",
+        "Автор мода:": "tijon23"
+    },
+    {
+        "Название мода:": "vlads 0.15 compatibility",
+        "Версия Факторио:": "0.16",
+        "Версия Мода:": "1.0.0",
+        "Описание мода:": "Gui compatibility mod to simplify migration from 0.15",
+        "Автор мода:": "wvlad"
+    },
+    {
+        "Название мода:": "5Dim's mod - New Bot Recaller w/o 5dim",
+        "Версия Факторио:": "1.1",
+        "Версия Мода:": "1.1.3",
+        "Описание мода:": "Rework of McGuten's Bot Recaller mod so that it doesn't require the core library.",
+        "Автор мода:": "Gandave"
+    },
+    {
+        "Название мода:": "1000 Inventory Size",
+        "Версия Факторио:": "0.17.45",
+        "Версия Мода:": "0.1.0",
+        "Описание мода:": "Increase the player bag size.",
+        "Автор мода:": "szojusz"
+    },
+    {
+        "Название мода:": "1000 Sounds to die for",
+        "Версия Факторио:": "0.18",
+        "Версия Мода:": "0.18.0",
+        "Описание мода:": "DEPRECATED\r\n\r\nGo back to the original mod, it is now updated.",
+        "Автор мода:": "Wyrrrd"
+    },
+    {
+        "Название мода:": "1000 Sounds to die for",
+        "Версия Факторио:": "1.1",
+        "Версия Мода:": "0.1.12",
+        "Описание мода:": "Plays a different sound, on players death .. based on TrainHorn by Benjamin Lee",
+        "Автор мода:": "vralfy"
+    },
+    {
+        "Название мода:": "1000x Lab",
+        "Версия Факторио:": "0.17",
+        "Версия Мода:": "0.0.2",
+        "Описание мода:": "A lab that process science 1000x faster.",
+        "Автор мода:": "Sicksouleaters"
+    },
+    {
+        "Название мода:": "100% Biter Evolution Start",
+        "Версия Факторио:": "1.1",
+        "Версия Мода:": "1.0.1",
+        "Описание мода:": "Starts off the game at maximum evolution... (as seen in Michael Hendriks YouTube series [Is it possible to beat Factorio with absolutely very normal settings? (and 1 teeny tiny mod...)])... Good Luck Soldier!\r\n\r\nChangelog:\r\n1.0.1 - Icon added\r\n1.0.0 - First release",
+        "Автор мода:": "mikehendi"
+    },
+    {
+        "Название мода:": "10x Harder",
+        "Версия Факторио:": "0.15",
+        "Версия Мода:": "1.1.4",
+        "Описание мода:": "Makes the game 10x harder and more.",
+        "Автор мода:": "withers"
+    },
+    {
+        "Название мода:": "112233",
+        "Версия Факторио:": "1.1",
+        "Версия Мода:": "0.2.3",
+        "Описание мода:": "Adds various energy production buildings.",
+        "Автор мода:": "Myszonos"
+    },
+    {
+        "Название мода:": "1.1.68 Belt Icons",
+        "Версия Факторио:": "1.1",
+        "Версия Мода:": "1.0.2",
+        "Описание мода:": "Reverts the 1.1.69 changes to belt icons.",
+        "Автор мода:": "SpaceTruck"
+    }
+]
