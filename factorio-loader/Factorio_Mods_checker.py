@@ -32,18 +32,36 @@ class Checker():
 
         pages = Checker.pages()
         # Mods Checker
-
         for page in range(pages):
             mods = requests.get(f'https://mods.factorio.com/api/mods?page={page}', headers=Checker.headers)
             res = json.dumps(mods.json(), indent=2)
             items = json.loads(str(res))
             mods_res = items['results']
             for mod in mods_res:
-                mod_name = mod['title']
-                factorio_version = mod['latest_release']['info_json']['factorio_version']
-                mod_version = mod['latest_release']['version']
-                mod_desctiption = mod['summary']
-                mod_owner = mod['owner']
+                try:
+                    mod_name = mod['title']
+                except:
+                    mod_name = 'No name'
+
+                try:
+                    factorio_version = mod['latest_release']['info_json']['factorio_version']
+                except:
+                    factorio_version = 'No Version'
+                
+                try:
+                    mod_version = mod['latest_release']['version']
+                except:
+                    mod_version = 'No Mod Version'
+                
+                try:
+                    mod_desctiption = mod['summary']
+                except:
+                    mod_desctiption = 'No Nod Desctiprion'
+                
+                try:
+                    mod_owner = mod['owner']
+                except:
+                    mod_owner = 'No Mod Owner'
 
                 mod = {
                     'Название мода:':mod_name,
@@ -52,6 +70,7 @@ class Checker():
                     'Описание мода:':mod_desctiption,
                     'Автор мода:':mod_owner,
                 }
+
 
                 all_mods_list.append(mod)
         

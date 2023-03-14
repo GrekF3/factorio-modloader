@@ -4,6 +4,8 @@ from Factorio_Mods_checker import Checker
 import dearpygui.dearpygui as dpg
 import json
 
+
+
 dpg.create_context()
 
 
@@ -11,31 +13,37 @@ def Mod_Finder(sender, app_data):
     mod = dpg.get_value('Mod_name')
     print(mod)
 
-def Updater(sender, pages):
-        dpg.hide_item('Mods_List')
-        pages = Checker.pages()
-        Checker.all_mods_checker()
-        progress_value = 1/pages
-        dpg.show_item('Updater_Bar')
-        i = progress_value
-        while i < 1:
-            i = i + progress_value
-            print(i)
-            sleep(0.5)
-            dpg.set_value('Updater_Bar', i)
+# mods_picker
+activated = []
+def Mods_Picker(Sender):
+    if dpg.get_value(Sender) == True:
+        activated.append(Sender)
+        print(activated)
+    else:
+        activated.remove(Sender)
+        print(activated)
+         
         
+def Updater():
+        dpg.hide_item('Mods_group')
+        dpg.show_item('Update_Window')
+
+        Checker.all_mods_checker()
+
         dpg.show_item('Updated')
-        dpg.show_item('Mods_List')
+        dpg.show_item('Mods_group')
 
 
-with dpg.window(tag="Primary Window"):
+with dpg.window(tag="Main"):
     
     dpg.add_text("Created by GrekF3", bullet=True)
     search = dpg.add_input_text(label="Mod Name", width=500, tag='Mod_name')
-    dpg.add_button(label='Search', callback=Mod_Finder)
-
-    dpg.add_button(label='Update Mods', callback=Updater)
-    dpg.add_progress_bar(show=False, default_value=0.0, label='Update...', tag='Updater_Bar')
+    with dpg.group(horizontal=True):
+         dpg.add_button(label='Search', callback=Mod_Finder)
+         dpg.add_button(label='Update Mods', callback=Updater)
+    with dpg.group(horizontal=False, tag='Update_Window', show=False):
+        dpg.add_progress_bar(show=True, default_value=0.0,tag='Updater_Bar',label='Update...')
+        dpg.add_loading_indicator(show=True)
     dpg.add_text('Mods Updated', show=False, tag='Updated')
 
     try:
@@ -46,7 +54,10 @@ with dpg.window(tag="Primary Window"):
                 mod_name = mods.get('Название мода:')
                 mods_list.append(mod_name)
             r.close
-        dpg.add_listbox(items=mods_list, show=True, tag='Mods_List', width=400, label='Aviable Mods')
+        dpg.add_text('Aviabled mods:')
+        with dpg.group(horizontal=False, tag='Mods_group', show=True):
+            for mod in mods_list:
+                dpg.add_checkbox(label=mod, tag=mod, callback=Mods_Picker)
     except:
          pass
     
@@ -54,9 +65,9 @@ with dpg.window(tag="Primary Window"):
     
 
 
-dpg.create_viewport(title='Factorio Mods Downloader', width=800, height=600)
+dpg.create_viewport(title='Factorio Mods Downloader', width=1000, height=600)
 dpg.setup_dearpygui()
 dpg.show_viewport()
-dpg.set_primary_window("Primary Window", True)
+dpg.set_primary_window("Main", True)
 dpg.start_dearpygui()
 dpg.destroy_context()
