@@ -2,55 +2,57 @@ from Cracked_Mods_Checker import CrackedMods
 import requests
 import json
 
-# Url
-headers = {'Accept': 'application/json'}
-url = 'https://mods.factorio.com/api/mods?page=1'
-response = requests.get(url, headers=headers)
-result_json = json.dumps(response.json(), indent=2)
+class Checker():
 
-# Finder
-items = json.loads(str(result_json))
-item = items['pagination']
-links = item['links']
-last_link = links['last']
+    headers = {'Accept': 'application/json'}
 
-# Last_Page
-page = int((last_link[last_link.find("=") + 1 : ]))
+    def pages():
+        # Url
+        headers = Checker.headers
+        url = 'https://mods.factorio.com/api/mods?page=1'
+        response = requests.get(url, headers=headers)
+        result_json = json.dumps(response.json(), indent=2)
 
+        # Finder
+        items = json.loads(str(result_json))
+        item = items['pagination']
+        links = item['links']
+        last_link = links['last']
 
-# All mods Finder
+        # Last_Page
+        pages = int((last_link[last_link.find("=") + 1 : ]))
 
-def all_mods_checker(pages):
+        return pages
 
-    all_mods_list = []
+    # All mods Finder
+    def all_mods_checker():
 
-    for page in range(1):
-        mods = requests.get(f'https://mods.factorio.com/api/mods?page={page}', headers=headers)
-        res = json.dumps(mods.json(), indent=2)
+        all_mods_list = []
 
-        print(f'Работаю над страницей {page}')
+        pages = Checker.pages()
+        # Mods Checker
 
-        items = json.loads(str(res))
-        mods_res = items['results']
-        for mod in mods_res:
-            mod_name = mod['title']
-            factorio_version = mod['latest_release']['info_json']['factorio_version']
-            mod_version = mod['latest_release']['version']
-            mod_desctiption = mod['summary']
-            mod_owner = mod['owner']
+        for page in range(pages):
+            mods = requests.get(f'https://mods.factorio.com/api/mods?page={page}', headers=Checker.headers)
+            res = json.dumps(mods.json(), indent=2)
+            items = json.loads(str(res))
+            mods_res = items['results']
+            for mod in mods_res:
+                mod_name = mod['title']
+                factorio_version = mod['latest_release']['info_json']['factorio_version']
+                mod_version = mod['latest_release']['version']
+                mod_desctiption = mod['summary']
+                mod_owner = mod['owner']
 
-            mod = {
-                'Название мода:':mod_name,
-                'Версия Факторио:':factorio_version,
-                'Версия Мода:':mod_version,
-                'Описание мода:':mod_desctiption,
-                'Автор мода:':mod_owner,
-            }
+                mod = {
+                    'Название мода:':mod_name,
+                    'Версия Факторио:':factorio_version,
+                    'Версия Мода:':mod_version,
+                    'Описание мода:':mod_desctiption,
+                    'Автор мода:':mod_owner,
+                }
 
-            all_mods_list.append(mod)
-    
-    return all_mods_list
-
-
-
+                all_mods_list.append(mod)
+        
+        return all_mods_list
 
